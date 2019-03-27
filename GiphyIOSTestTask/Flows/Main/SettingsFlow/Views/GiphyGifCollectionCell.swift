@@ -7,12 +7,24 @@
 //
 
 import UIKit
+//import SwiftyGif
+//import GiphyCoreSDK
+import FLAnimatedImage
 
-class GiphyGifCollectionCell: UICollectionViewCell {
+class GiphyGifCollectionCell: UICollectionViewCell, NibReusable {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet private weak var gifImageView: FLAnimatedImageView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        gifImageView.animatedImage = nil
     }
-
+    
+    func configure(url: URL?) {
+//        if let url = url, let data = try? Data(contentsOf: url) {
+//            let gifImage = FLAnimatedImage(animatedGIFData: data)
+//            gifImageView.animatedImage = gifImage
+//        }
+    }
 }

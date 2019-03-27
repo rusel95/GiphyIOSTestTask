@@ -13,10 +13,14 @@ abstract_target 'Shared' do
     pod 'RxSwift', '~> 4.4.0'
     pod 'RxRealm', '~> 0.7.6'
     pod 'NSObject+Rx', '~> 4.4.1'
-
-    # Giphy
-    pod 'GiphyCoreSDK'
+    pod 'RxOptional', '~> 3.5.0'
+    pod 'FLAnimatedImage', '~> 1.0'
     
+    # Giphs
+    pod 'GiphyCoreSDK'
+    # pod 'SwiftyGif'
+    pod 'FLAnimatedImage', '~> 1.0'
+
     target 'Core' do
       
   	# DB client component

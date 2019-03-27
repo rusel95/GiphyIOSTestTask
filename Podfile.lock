@@ -5,6 +5,7 @@ PODS:
     - DBClient/Core
     - RealmSwift (~> 3.11.1)
     - YALResult (= 1.1)
+  - FLAnimatedImage (1.0.12)
   - fluid-slider (1.0.0):
     - pop
   - GiphyCoreSDK (1.4.1)
@@ -20,6 +21,9 @@ PODS:
     - Realm (= 3.11.2)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxOptional (3.5.0):
+    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxRealm (0.7.6):
     - RealmSwift (~> 3.0)
@@ -37,12 +41,14 @@ PODS:
 
 DEPENDENCIES:
   - DBClient/Realm
+  - FLAnimatedImage (~> 1.0)
   - fluid-slider
   - GiphyCoreSDK
   - HandyText (~> 1.4.0)
   - Kingfisher (~> 4.10.1)
   - "NSObject+Rx (~> 4.4.1)"
   - RxCocoa (~> 4.4.0)
+  - RxOptional (~> 3.5.0)
   - RxRealm (~> 0.7.6)
   - RxSwift (~> 4.4.0)
   - SideMenu (~> 5.0)
@@ -55,6 +61,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DBClient
+    - FLAnimatedImage
     - fluid-slider
     - GiphyCoreSDK
     - HandyText
@@ -65,6 +72,7 @@ SPEC REPOS:
     - RealmSwift
     - RxAtomic
     - RxCocoa
+    - RxOptional
     - RxRealm
     - RxSwift
     - SideMenu
@@ -77,6 +85,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   DBClient: d24d8defcd29a9282e303abb50d4cfcb036493d1
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
   GiphyCoreSDK: 147a492c2477e9ddb20f8dd3a4489e3ea3c05e38
   HandyText: aae8b8410c084493e2d3aa74ca1530d221b89462
@@ -87,6 +96,7 @@ SPEC CHECKSUMS:
   RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
   RxRealm: 5379eddd74f8d617ca7681d1f8d144af25b432b0
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
@@ -97,6 +107,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
   YALResult: e7acf1405252ef9a2a1f121176cc44b588844d93
 
-PODFILE CHECKSUM: f579b9623acea4903fc0ccf588e4480bb04988e0
+PODFILE CHECKSUM: 4857c5f5419fb54197e464f5e00466efc8dbc37b
 
 COCOAPODS: 1.6.1
