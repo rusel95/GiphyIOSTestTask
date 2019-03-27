@@ -33,6 +33,7 @@ final class BrowseModel: EventNode, HasDisposeBag {
     
     private func initializeBindings() {
         keywords.distinctUntilChanged()
+            .throttle(1.0, latest: true, scheduler: MainScheduler.asyncInstance)
             .doOnNext { [weak self] _ in
                 self?.fetchOffset.onNext(0)
             }.disposed(by: disposeBag)
@@ -64,7 +65,8 @@ final class BrowseModel: EventNode, HasDisposeBag {
     }
     
     // MARK: - private
-    
+    //TODO: Make a separate service for requests
+    //TODO: Make some requestManager + activity indicators
     public func getGifs(query: String,
                         offset: Int,
                         giphsCompletionHandler: @escaping ([GPHMedia]) -> Void,

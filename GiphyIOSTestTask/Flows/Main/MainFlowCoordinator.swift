@@ -29,7 +29,7 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
     
     func createFlow() -> UIViewController {
         let controller: BrowseViewController = container.autoresolve(argument: self)
-        
+        controller.title = L10n.browseTitle
         return controller
     }
     

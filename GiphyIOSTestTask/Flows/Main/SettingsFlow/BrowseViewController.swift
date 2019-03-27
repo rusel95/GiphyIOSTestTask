@@ -89,7 +89,8 @@ final class BrowseViewController: UIViewController, UICollectionViewDelegate {
         
         let cellsInRowCount = 3
         let interitemSpacing: CGFloat = 10
-        let inset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        let topInset = searchField.frame.height + 40.0
+        let inset = UIEdgeInsets(top: topInset, left: 20, bottom: 20, right: 20)
         
         let cellSize = (resultsCollectionView.frame.size.width - interitemSpacing * CGFloat(cellsInRowCount - 1)
             - inset.left - inset.right) / CGFloat(cellsInRowCount)
@@ -101,18 +102,3 @@ final class BrowseViewController: UIViewController, UICollectionViewDelegate {
     }
     
 }
-
-//extension BrowseViewController: UICollectionViewDataSource {
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 3
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView,
-//                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = resultsCollectionView.dequeueReusableCell(indexPath, cellType: GiphyGifCollectionCell.self)
-//       // cell.configure(gifURL: viewModel.giphsURLs.va)
-//        return cell
-//    }
-//
-//}

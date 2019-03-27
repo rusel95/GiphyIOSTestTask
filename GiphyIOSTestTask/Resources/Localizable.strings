@@ -9,10 +9,13 @@
 "common_buttons.ok_button.title" = "OK";
 
 // HUDs
-"alert.default_error_tile" = "Error";
-"alert.default_success_tile" = "Success";
-"alert.default_info_tile" = "Information";
+"alert_default_error_tile" = "Error";
+"alert_default_success_tile" = "Success";
+"alert_default_info_tile" = "Information";
 
 // Errors
-"error.cannot_login" = "Cannot login, please try again later";
-"error.undefined" = "Something went wrong, please try again later";
+"error_cannot_login" = "Cannot login, please try again later";
+"error_undefined" = "Something went wrong, please try again later";
+
+// Browse
+"browse_title" = "Browse";

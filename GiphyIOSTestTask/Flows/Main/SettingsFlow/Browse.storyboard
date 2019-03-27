@@ -18,17 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzr-fS-iSa">
-                                <rect key="frame" x="37.5" y="40" width="300" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="qi3-cW-EII"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-5L-Bmb">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-5L-Bmb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VxW-Hy-rG3">
                                     <size key="itemSize" width="127" height="127"/>
@@ -57,16 +48,25 @@
                                             <constraint firstItem="GIa-2D-UG4" firstAttribute="leading" secondItem="23k-HO-6rr" secondAttribute="leading" id="g77-na-ekh"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="gifImageView" destination="GIa-2D-UG4" id="NoV-v7-KUP"/>
+                                            <outlet property="gifImageView" destination="GIa-2D-UG4" id="5yD-xX-dQw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzr-fS-iSa">
+                                <rect key="frame" x="37.5" y="40" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qi3-cW-EII"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Tzr-fS-iSa" firstAttribute="top" secondItem="Ivy-6R-Syh" secondAttribute="top" constant="20" id="BoD-qR-qJy"/>
-                            <constraint firstItem="i9N-5L-Bmb" firstAttribute="top" secondItem="Tzr-fS-iSa" secondAttribute="bottom" constant="20" id="Elo-4H-yQz"/>
+                            <constraint firstItem="i9N-5L-Bmb" firstAttribute="top" secondItem="Ivy-6R-Syh" secondAttribute="top" id="Elo-4H-yQz"/>
                             <constraint firstItem="i9N-5L-Bmb" firstAttribute="leading" secondItem="Ivy-6R-Syh" secondAttribute="leading" id="Fsz-Is-Lnd"/>
                             <constraint firstItem="Tzr-fS-iSa" firstAttribute="centerX" secondItem="Ivy-6R-Syh" secondAttribute="centerX" id="QNH-a6-t0U"/>
                             <constraint firstItem="Tzr-fS-iSa" firstAttribute="width" secondItem="Ivy-6R-Syh" secondAttribute="width" multiplier="0.8" id="h7V-PA-Hfw"/>

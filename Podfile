@@ -14,16 +14,15 @@ abstract_target 'Shared' do
     pod 'RxRealm', '~> 0.7.6'
     pod 'NSObject+Rx', '~> 4.4.1'
     pod 'RxOptional', '~> 3.5.0'
-    pod 'FLAnimatedImage', '~> 1.0'
-    
+ 
     # Giphs
     pod 'GiphyCoreSDK'
-    # pod 'SwiftyGif'
+    pod 'SDWebImage'
     pod 'FLAnimatedImage', '~> 1.0'
 
     target 'Core' do
       
-  	# DB client component
+    # DB client component
     pod 'DBClient/Realm'
     
     # UI

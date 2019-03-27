@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import GiphyCoreSDK
+import SDWebImage
 
 final class BrowseViewModel: HasDisposeBag {
     
@@ -17,7 +17,7 @@ final class BrowseViewModel: HasDisposeBag {
     var giphsURLs: Observable<[URL?]> {
         return model.giphs.asObservable()
             .map { gifs -> [URL?] in
-                return gifs.map { URL(string: $0.images?.downsized?.gifUrl ?? "") }
+                return gifs.map { URL(string: $0.images?.fixedWidthDownsampled?.gifUrl ?? "") }
             }
     }
     
@@ -28,9 +28,9 @@ final class BrowseViewModel: HasDisposeBag {
     var fetchLimit: Int {
         return model.fetchLimit
     }
-    
+
     let keywords = BehaviorRelay<String?>(value: nil)
-    
+
     private let model: BrowseModel
     
     init(model: BrowseModel) {

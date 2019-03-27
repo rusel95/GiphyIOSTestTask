@@ -8,6 +8,7 @@ import UIKit
 import Core
 import Swinject
 import GiphyCoreSDK
+import SDWebImage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         GiphyCore.configure(apiKey: "TU9BbnooxwU9zVbbO8llT0DMeqiRqVLJ")
+       
+        SDImageCache.shared().config.maxCacheSize = 200 * 1024 * 1024 // Setting disk cache to 200 MB
+        SDImageCache.shared().config.shouldDecompressImages = false
+        SDImageCache.shared().config.shouldCacheImagesInMemory = false
+        SDImageCache.shared().config.shouldUseWeakMemoryCache = true
+        SDImageCache.shared().maxMemoryCost = 40 * 1024 * 1024 // Setting memory cache to 40 MB
+        SDWebImageCodersManager.sharedInstance().addCoder(SDWebImageGIFCoder.shared())
+        
         NotificationsService.shared.didFinishLaunching(application: application, launchOptions: launchOptions)
         applicationFlowCoordinator = ApplicationFlowCoordinator(window: window!)
         applicationFlowCoordinator.execute()
